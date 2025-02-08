@@ -34,3 +34,20 @@ edges = [
     ("Airport", "University"),
     ("Harbor", "Industrial Zone"),
 ]
+
+
+graph = {
+    "Central Station": [("North District", 1), ("South District", 1), ("East District", 1), ("West District", 1), ("Airport", 3), ("Industrial Zone", 2)],
+    "North District": [("Intermediary 1", 1)],
+    "Intermediary 1": [("Intermediary 3", 1)],
+    "Intermediary 3": [("Airport", 2)],
+    "South District": [("Intermediary 2", 1)],
+    "Intermediary 2": [("Intermediary 4", 1)],
+    "Intermediary 4": [("Airport", 2)],
+    "East District": [("University", 2)],
+    "West District": [("Harbor", 2)],
+    "Airport": [("Central Station", 3), ("University", 1)],
+    "Industrial Zone": [("Central Station", 2)],
+    "University": [("Central Station", 1)],
+    "Harbor": [("Central Station", 2), ("Industrial Zone", 1)],
+}
